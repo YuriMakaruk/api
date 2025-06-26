@@ -1,6 +1,6 @@
 # Joke API
 
-A simple RESTful API built with Node.js and Express that serves random programming and general jokes. The API is documented using Swagger (OpenAPI) and provides an interactive documentation UI.
+A simple RESTful API built with Node.js and Express that serves random jokes. The API is documented using Swagger (OpenAPI) with JavaScript code annotations.
 
 ## Features
 
