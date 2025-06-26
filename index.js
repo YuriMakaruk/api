@@ -18,6 +18,8 @@ const jokes = [ // Array of jokes to serve from the API
  * /:
  *   get:
  *     summary: Welcome message for the Joke API
+ *     tags:
+ *       - General
  *     responses:
  *       200:
  *         description: Returns a welcome message
