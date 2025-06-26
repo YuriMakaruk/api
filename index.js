@@ -37,6 +37,8 @@ app.get('/', (req, res) => { // Define a GET endpoint at the root path
  * /joke:
  *   get:
  *     summary: Get a random joke
+ *     tags:
+ *       - Jokes
  *     responses:
  *       200:
  *         description: Returns a random joke
