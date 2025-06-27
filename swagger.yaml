@@ -1,0 +1,60 @@
+# swagger.yaml
+
+openapi: 3.0.0
+info:
+  title: Joke API
+  version: 1.0.0
+  description: A simple API to get random jokes
+
+servers:
+  - url: http://localhost:3000
+  - url: https://api-e2z2.onrender.com
+
+paths:
+  /:
+    get:
+      summary: Welcome message
+      tags: [Home]
+      responses:
+        '200':
+          description: Welcome message from the API
+
+  /joke:
+    get:
+      summary: Get a random joke
+      tags: [Jokes Endpoints]
+      responses:
+        '200':
+          description: A random joke
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  joke:
+                    type: string
+                    example: Why don't programmers like nature? Too many bugs.
+    post:
+      summary: Add a new joke
+      tags: [Jokes Endpoints]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                joke:
+                  type: string
+                  example: Why did the programmer quit his job? Because he didn't get arrays.
+      responses:
+        '201':
+          description: Joke added successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Joke added successfully
