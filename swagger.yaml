@@ -37,6 +37,7 @@ paths:
     post:
       summary: Add a new joke
       tags: [Jokes Endpoints]
+      description: Adds a new joke to the in-memory list. **Note:** Jokes are stored only in memory and will be lost when the server restarts.
       requestBody:
         required: true
         content:
